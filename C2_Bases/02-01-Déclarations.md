@@ -10,15 +10,15 @@ Effectuer les déclarations suivantes :
 
 1.
 
-'''c
+```c
 unsigned char c;
-'''
+```
 
 2.
 
-'''c
+```c
 int val;
-'''
+```
 
 
 </details>
