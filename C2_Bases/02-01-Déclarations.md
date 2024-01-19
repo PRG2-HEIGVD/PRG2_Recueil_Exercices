@@ -16,7 +16,7 @@ unsigned char c;
 
 2.
 
-```c
+```cpp
 int val;
 ```
 
