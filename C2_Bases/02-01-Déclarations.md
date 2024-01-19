@@ -10,7 +10,7 @@ Effectuer les déclarations suivantes :
 
 1.
 
-```c
+```cpp
 unsigned char c;
 ```
 
