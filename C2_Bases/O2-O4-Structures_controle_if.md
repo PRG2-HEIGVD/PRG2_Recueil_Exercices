@@ -16,20 +16,47 @@ Exemple
 
 ~~~cpp
 
-int res_int;
-float res_float;
-
-int main() {
-
-    int a = 5, b = 3;
-    float c = 7.5, d = 2.5;
-
-	res_int = a + b;
-	res_int = c - d;
-
-	res_float = a * b;
-	res_float = c / d;
-
+#include <stdio.h>
+ 
+int main()
+{
+    int num1, num2, num3, max;
+ 
+    /* Fournir les données d'entrée */
+    printf("Saisir 3 nombres: ");
+    scanf("%d%d%d", &num1, &num2, &num3);
+     
+ 
+    if(num1 > num2)
+    {
+        if(num1 > num3)
+        {
+            /* si num1 > num2 et num1 > num3 */
+            max = num1;
+        }
+        else
+        {
+            /* si num1 > num2 mais num1 > num3 est fausse */
+            max = num3;
+        }
+    }
+    else
+    {
+        if(num2 > num3)
+        {
+            /* Si num1 < num2 et num2 > num3 */
+            max = num2;
+        }
+        else
+        {
+            /* si num1 < num2 et num2 > num3 */
+            max = num3;
+        }
+    }
+     
+    /* afficher le résultat */
+    printf("le maximum est = %d", max);
+ 
     return 0;
 }
 
