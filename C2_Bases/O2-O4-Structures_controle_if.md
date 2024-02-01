@@ -6,8 +6,8 @@
 (https://developpement-informatique.com/article/316/exercices-corriges-pour-maitriser-la-structure-de-controle-if-else)
 </details>
 
-Exemple #1
-----------
+Exemple
+-------
 - Données d'entrée: _117_
 - Données de sortie: _117 est divisible par 3 et 13_
 
@@ -37,8 +37,10 @@ int main() {
 ~~~
 </details>
 
-Exemple #2
-----------
+Écrivez un programme pour trouver un maximum entre trois nombres en utilisant une if-else ou if imbriquée.
+
+Exemple
+-------
 - Données d'entrée: _17 12 16_
 - Données de sortie: _Le maximum est : 17_
 
