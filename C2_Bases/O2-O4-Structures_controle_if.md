@@ -27,28 +27,20 @@ int main()
     scanf("%d%d%d", &num1, &num2, &num3);
      
  
-    if(num1 > num2)
+    if (num1 > num2)
     {
-        if(num1 > num3)
-        {
+        if(num1 > num3) {
             /* si num1 > num2 et num1 > num3 */
             max = num1;
-        }
-        else
-        {
+        } else {
             /* si num1 > num2 mais num1 > num3 est fausse */
             max = num3;
         }
-    }
-    else
-    {
-        if(num2 > num3)
-        {
+    } else {
+        if (num2 > num3) {
             /* Si num1 < num2 et num2 > num3 */
             max = num2;
-        }
-        else
-        {
+        } else {
             /* si num1 < num2 et num2 > num3 */
             max = num3;
         }
