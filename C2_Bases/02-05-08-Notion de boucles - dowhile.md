@@ -1,12 +1,17 @@
 # Notion de boucles - do..while
 
-Écrire un programme en C qui utilise une boucle do..while pour inverser les chiffres d'un nombre entier saisi par l'utilisateur. Par exemple, si l'utilisateur saisit 123, le programme affiche 321.
+Écrire un programme qui demande à l'utilisateur de saisir son âge. Si l'âge est inférieur à 18, le programme demande à nouveau l'âge. Ce processus continue jusqu'à ce que l'utilisateur saisisse un âge valide (18 ou plus), après quoi le programme imprime "Accès accordé".
 
 ## Exemple d'execution
 
 ```cpp
-Entrez un nombre pour inverser ses chiffres: 42987123
-Le nombre inversé est: 32178924
+Entrez votre âge: 14
+Entrez votre âge: 17
+Entrez votre âge: 8
+Entrez votre âge: 17
+Entrez votre âge: 10
+Entrez votre âge: 42
+Accès accordé.
 ```
 
 <details>
@@ -16,14 +21,12 @@ Le nombre inversé est: 32178924
 #include <stdio.h>
 
 int main() {
-    int nombre, inverse = 0;
-    printf("Entrez un nombre pour inverser ses chiffres: ");
-    scanf("%d", &nombre);
+    int age;
     do {
-        inverse = inverse * 10 + nombre % 10;
-        nombre /= 10;
-    } while (nombre > 0);
-    printf("Le nombre inversé est: %d\n", inverse);
+        printf("Entrez votre âge: ");
+        scanf("%d", &age);
+    } while (age < 18);
+    printf("Accès accordé.\n");
     return 0;
 }
 ```
