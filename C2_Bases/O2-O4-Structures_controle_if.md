@@ -29,7 +29,7 @@ int main() {
     if((nb % 3 == 0) && (nb % 13 == 0))     {
         printf("%d est divisible par 3 et 13",nb);
     } else {
-        printf("%d n'est divisible par 3 ni 13",nb);
+        printf("%d n'est pas divisible par 3 et 13",nb);
     }
  
     return 0;
