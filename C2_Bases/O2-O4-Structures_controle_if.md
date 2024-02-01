@@ -1,7 +1,9 @@
 # Structures de contrôle - if
 
 Écrivez un programme pour vérifier si un nombre est divisible par 3 et 13 ou non, en utilisant if-else.
+<details>
 (https://developpement-informatique.com/article/316/exercices-corriges-pour-maitriser-la-structure-de-controle-if-else)
+</details>
 
 Exemple
 -------
