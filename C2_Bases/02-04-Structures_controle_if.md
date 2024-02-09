@@ -1,15 +1,15 @@
 # Structures de contrôle - if
-
-Écrivez un programme pour vérifier si un nombre est divisible par 3 et 13 ou non, en utilisant if-else.
 <details>
 <summary>Source</summary>
 (https://developpement-informatique.com/article/316/exercices-corriges-pour-maitriser-la-structure-de-controle-if-else)
 </details>
 
+## Exercice 1
+Écrivez un programme pour vérifier si un nombre est divisible par 3 et 13 ou non, en utilisant if-else.
+
 Exemple
--------
-- Données d'entrée: _117_
-- Données de sortie: _117 est divisible par 3 et 13_
+- Entrée: _117_
+- Sorties: _117 est divisible par 3 et 13_
 
 <details>
 <summary>Solution</summary>
@@ -37,12 +37,12 @@ int main() {
 ~~~
 </details>
 
+## Exercice 2
 Écrivez un programme pour trouver un maximum entre trois nombres en utilisant une if-else ou if imbriquée.
 
 Exemple
--------
-- Données d'entrée: _17 12 16_
-- Données de sortie: _Le maximum est : 17_
+- Entrées: _17 12 16_
+- Sorties: _Le maximum est : 17_
 
 <details>
 <summary>Solution</summary>
