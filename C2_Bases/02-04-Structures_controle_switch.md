@@ -1,7 +1,7 @@
 # Structures de contrôle - switch
 <details>
 <summary>Source</summary>
-(https://developpement-informatique.com/article/316/exercices-corriges-pour-maitriser-la-structure-de-controle-if-else)
+(https://developpement-informatique.com/article/317/exercices-corriges-pour-maitriser-switch-case-java-c)
 </details>
 
 ## Exercice 1
@@ -102,7 +102,7 @@ int main()
  
         default:
             printf("Operation mal formee ou inconnue!");
-			return -1;
+            return -1;
     }
  
     /* afficher le résultat */
