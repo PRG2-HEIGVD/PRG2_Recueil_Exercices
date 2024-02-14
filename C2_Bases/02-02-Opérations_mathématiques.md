@@ -2,8 +2,8 @@
 
 Écrivez un programme qui effectue les opérations suivantes
 
-Indication
-----------
+Indications
+-----------
 Déclarez les nombres dans des variables locales et stockez le résultat dans une variable globale.
 
 - Addition de deux nombres entiers.
