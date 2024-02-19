@@ -25,7 +25,7 @@ Votre programme devrait donc :
 ~~~cpp
 include <stdio.h>
 
-int main() {
+int main(void) {
    
     char nom[50];
     int age;
@@ -47,6 +47,6 @@ int main() {
 
     return 0;
 }
-~~~cpp
+~~~
  
 </details>
