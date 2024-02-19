@@ -17,9 +17,11 @@ mais écrit le résultat à l'adresse sockée dans *str*
 Exemple :
 
 ~~~cpp
+
 char s[80];
 sprintf(s, "%s", "hello");
-~~~cpp
+
+~~~
 
 <details>
 <summary>Solution</summary>
@@ -55,6 +57,6 @@ int main(void) {
 
 } 
  
-~~~cpp
+~~~
  
 </details>
