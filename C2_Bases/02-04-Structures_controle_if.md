@@ -25,7 +25,7 @@ int main() {
     printf("Saisir un nombre: ");
     scanf("%d", &nb);
 
-    if((nb % 3 == 0) && (nb % 13 == 0))     {
+    if ((nb % 3 == 0) && (nb % 13 == 0))     {
         printf("%d est divisible par 3 et 13",nb);
     } else {
         printf("%d n'est pas divisible par 3 et 13",nb);
