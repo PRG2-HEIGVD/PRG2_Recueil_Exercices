@@ -61,7 +61,7 @@ int main()
  
     if (num1 > num2)
     {
-        if(num1 > num3) {
+        if (num1 > num3) {
             /* si num1 > num2 et num1 > num3 */
             max = num1;
         } else {
