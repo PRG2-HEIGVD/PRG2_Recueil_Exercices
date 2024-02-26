@@ -4,7 +4,9 @@ Que va afficher à l'exécution chacun des groupes d'instructions ci-dessous ?
 
 ```cpp
 //1
-for (int i = 0; i <= 5; i += 2) {
+int i;
+
+for (i = 0; i <= 5; i += 2) {
     printf("%d ", i);
 }
 ```
