@@ -32,28 +32,28 @@ sprintf(s, "%s", "hello");
 
 int main(void) {
 
-	char array[60];
-	char *ptr;
-	char *strs[3];
-	int i;
+    char array[60];
+    char *ptr;
+    char *strs[3];
+    int i;
 
-	ptr = array;
-	sprintf(ptr, "%s", "Mercredi");
+    ptr = array;
+    sprintf(ptr, "%s", "Mercredi");
 
     strs[2] = ptr;
 
-	ptr += 28;
-	sprintf(ptr, "%s", "Lundi");
+    ptr += 28;
+    sprintf(ptr, "%s", "Lundi");
 
-	strs[0] = ptr;
+    strs[0] = ptr;
 
-	ptr = array + 42;
-	sprintf(ptr, "%s", "Mardi");
+    ptr = array + 42;
+    sprintf(ptr, "%s", "Mardi");
 
-	strs[1] = ptr;
+    strs[1] = ptr;
 
-	for (i = 0; i < 3; i++)
-		printf("%s\n", strs[i]);
+    for (i = 0; i < 3; i++)
+        printf("%s\n", strs[i]);
 
 } 
  
