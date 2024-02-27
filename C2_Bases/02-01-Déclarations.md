@@ -3,7 +3,7 @@
 Effectuer les déclarations suivantes :
 
 1. Une variable permettant de stocker un octet non signé
-2. Un type représentant un entier 32-bit signé
+2. Une variable représentant un entier 32-bit signé
 
 3. Déclarez dans la fonction principale d'un programme C les variables nécessaires pour 
    représenter les informations suivantes :
