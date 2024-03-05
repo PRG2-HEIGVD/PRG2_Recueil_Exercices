@@ -16,18 +16,18 @@ Ensuite, le programme doit afficher le contenu des trois tableaux.
 
 #define TAILLE 5
 
-void somme_tableaux(const int *tab1, const int *tab2, int *resultat) {
+void somme_tableaux(int taille, const int *tab1, const int *tab2, int *resultat) {
     int i;
 
-    for (i = 0; i < TAILLE; i++) {
+    for (i = 0; i < taille; i++) {
         resultat[i] = tab1[i] + tab2[i];
     }
 }
 
-void afficher_tableau(const int *tab) {
+void afficher_tableau(int taille, const int *tab) {
     int i;
 
-    for (i = 0; i < TAILLE; i++) {
+    for (i = 0; i < taille; i++) {
         printf("%d ", tab[i]);
     }
     printf("\n");
@@ -47,18 +47,16 @@ int main(void) {
         scanf("%d", &tab2[i]);
     }
 
-    somme_tableaux(tab1, tab2, resultat);
+    somme_tableaux(TAILLE, tab1, tab2, resultat);
 
     printf("Premier tableau : ");
-    afficher_tableau(tab1);
+    afficher_tableau(sizeof tab1 / sizeof(int), tab1);
 
     printf("Deuxième tableau : ");
-    afficher_tableau(tab2);
+    afficher_tableau(sizeof tab2 / sizeof(int), tab2);
 
     printf("Résultat de la somme : ");
-    afficher_tableau(resultat);
-
-   
+    afficher_tableau(sizeof resultat / sizeof(int), resultat);
  
 ~~~cpp
  
