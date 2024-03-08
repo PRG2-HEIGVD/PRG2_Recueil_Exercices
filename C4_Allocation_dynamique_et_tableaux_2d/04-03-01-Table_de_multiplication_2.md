@@ -28,7 +28,8 @@ Erreur de saisie. Entrez un entier positif : 12
 #include <stdio.h>    // printf, scanf
 #include <stddef.h>   // size_t
 #include <stdlib.h>   // calloc, free, malloc
-#include <inttypes.h> // PRId64
+#include <stdint.h>   // int64_t 
+#include <inttypes.h> // SCNd64
 
 size_t lire_size_t(const char *message) {
     // lecture avec vérification d'un entier de type size_t 
