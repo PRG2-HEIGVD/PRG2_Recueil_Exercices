@@ -37,7 +37,7 @@ size_t lire_size_t(const char *message) {
     int64_t n;
     printf("%s", message);
     while (scanf("%" SCNd64, &n) != 1 || n <= 0) {
-        printf("Erreur de saisie. Entrez un entier positif \n");
+        printf("Erreur de saisie. Entrez un entier positif : ");
         while (getchar() != '\n')
             ;
     }
