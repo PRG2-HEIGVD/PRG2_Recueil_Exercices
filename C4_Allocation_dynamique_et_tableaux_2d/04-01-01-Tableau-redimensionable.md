@@ -46,6 +46,8 @@ int main() {
         printf("Entrez un entier positif (une lettre pour finir): ");
         int i;
         if (scanf("%d", &i) != 1) {
+            while (getchar() != '\n')
+                ; // nettoie le buffer d'entree
             break;
         }
         if (n == cap) {
