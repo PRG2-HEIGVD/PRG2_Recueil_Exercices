@@ -18,7 +18,7 @@ Vous avez entre: 4 2 5 7 6 3 4
 
 Pour le réaliser, utilisez un tableau alloué dynamiquement dont vous 
 doublez la capacité avec `realloc` dès que le nombre d'éléments qui
-doivent y être stoqués dépasse sa capacité actuelle. 
+doivent y être stockés dépasse sa capacité actuelle. 
 
 N'oubliez pas de tester si les allocations dynamiques ont fonctionné et
 de libérer la mémoire en fin de programme. 
