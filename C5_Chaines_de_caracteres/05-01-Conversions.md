@@ -73,8 +73,9 @@ bool isInteger(const char *str) {
     return *str == '\0';
 }
 
-// insert char c at position pos into string str of length len
-// len assumed to be correct
+// insert char c at position pos into string str 
+// the resulting string cannot exceed len characters
+// len is assumed to be compatible with str buffer
 int insChar(char *str, int len, char c, int pos) {
     if ((pos < 0) || (pos > len)) return -1;
     for (int i = len; i >= pos; i--) str[i + 1] = str[i];  // include '\0'
@@ -122,7 +123,7 @@ int main(int argc, char *argv[]) {
         printf("[e] Error while converting %lld\n", mult);
         return EXIT_FAILURE;
     } else {
-        ns = (len - 1) / 3 - 1;  // count separators 
+        ns = (len - 1) / 3;      // count separators 
         len += ns;               // and add them to length
         printf("[i] %d characters needed to store %lld\n", len + 1, mult);
     }
@@ -141,7 +142,6 @@ int main(int argc, char *argv[]) {
         printf("[e] Error while converting %lld\n", mult);
         return EXIT_FAILURE;
     }
-
     // format the result with separators before every 3 digits
     ns = 0; // no separator yet
     for (int i = 1; i < len - 2; i++) { // separators start at position 3 and end before last digit
@@ -150,11 +150,12 @@ int main(int argc, char *argv[]) {
                 printf("[e] Could not insert separator at position %d!\n", i);
                 return -1;
             }
-            ns++; // one separator added
+            ns++;                       // one separator added
         }
     }
 
     printf("[i] Result = %s\n", res);
+    free(res);
     return 0;
 }
 
