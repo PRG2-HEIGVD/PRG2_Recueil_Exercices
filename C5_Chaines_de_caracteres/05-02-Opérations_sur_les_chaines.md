@@ -9,6 +9,9 @@ Remplacer la fonction _insChar()_ de l'exercice 1 de la série 05-01-Conversions
 
 Contrairement à insChar(), insertStr()_ doit être implémentée en utilisant les fonctions de manipulations des chaines de caractères définies dans le header _string.h_.
 
+<details>
+<summary>Solution</summary>
+
 ~~~
 
 // insert string ins at position pos into string str
