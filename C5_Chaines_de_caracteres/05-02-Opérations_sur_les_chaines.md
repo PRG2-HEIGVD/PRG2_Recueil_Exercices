@@ -5,7 +5,9 @@
 </details>
 
 ## Exercice 1
-Remplacer la fonction insChar() de l'exercice 1 de la série 05-01-conversions par une fonction insertStr() qui inser une chaine au lieu d'un caractère unique, en utilisant les fonctions de manipulations des chaines de caractères définies dans le header _string.h_.
+Remplacer la fonction _insChar()_ de l'exercice 1 de la série 05-01-Conversions par une fonction _insertStr()_ qui insert toute une chaîne de caractères au lieu d'un caractère unique. 
+
+Contrairement à insChar(), insertStr()_ doit être implémentée en utilisant les fonctions de manipulations des chaines de caractères définies dans le header _string.h_.
 
 ~~~
 
@@ -25,6 +27,14 @@ int insertStr(char *str, int len, const char *ins, int pos) {
     free(s);
     return 0;
 }
+
+~~~
+
+Insertion d'un caractère avec _insertStr()_ dans le _main()_ de 05-01-Conversions.
+
+~~~
+
+if (insertStr(res, len + ns + 1, "\'", i + ns) < 0) {  // take into account added separators
 
 ~~~
 </details>
