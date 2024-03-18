@@ -5,7 +5,7 @@
 </details>
 
 ## Exercice 1
-Un palindrome est un texte identique lorsqu’il est lu de gauche à droite et de droite à gauche. Ainsi, le mot radar est un palindrome, de même que les phrases engage le jeu que je le gagne et élu par cette crapule. Normalement, il n’est pas tenu compte des accents, trémas, cédilles ou des espaces. Toutefois, pour cet exercice, nous nous contenterons de vérifier si un mot donné est un palindrome sans tenir compte des majuscules.
+Un palindrome est un texte identique lorsqu’il est lu de gauche à droite et de droite à gauche. Ainsi, le mot radar est un palindrome, de même que les phrases "engage le jeu que je le gagne" et "élu par cette crapule". Normalement, il n’est pas tenu compte des accents, trémas, cédilles ou des espaces. Toutefois, pour cet exercice, nous nous contenterons de vérifier si un mot donné est un palindrome sans tenir compte des majuscules.
 
 Exemple
 - Entrée: _[?] Saisir un mot (que des lettres dans [a-z,A-Z]): Radar_
