@@ -29,10 +29,10 @@ bool palindrome(char *s) {
     size_t len = 0;
 
     // calcul de la longueur de la chaine
-    while (s[len] != '\0') ++len;
+    while (s[len] != '\0') len++;
 
     // test de la symétrie des caractères
-    for (size_t i = 0; i < len; ++i)
+    for (size_t i = 0; i < len; i++)
         if (s[i] != s[len - 1 - i]) return false;
 
     return true;
