@@ -13,7 +13,7 @@ Exemple
 
 Exemple 2:
 - Entrée: _baobab_
-- Sortie: _[i] baobab n'est un palindrome_
+- Sortie: _[i] baobab n'est pas un palindrome_
 
 <details>
 <summary>Solution</summary>
