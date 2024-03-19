@@ -48,9 +48,9 @@ int main(void) {
 }
 ~~~
 
-Les buffers alloués pour contenir la liste de mots entrés par l'utilisateur ainsi que la phrase résultante sont dimensionnés au strict minimum nécessaire. L'espace pour la liste de mots est allouée de manière incrémentale en utilisant la fonction _realloc()_ de _string.h_ chaque fois qu'un mot est ajouté. Le programme affiche les changements d'adresse de la liste, suite à cette réallocation.
+Les buffers alloués pour contenir la liste de mots entrés par l'utilisateur ainsi que la phrase résultante sont dimensionnés au strict minimum nécessaire. L'espace pour la liste de mots est allouée de manière incrémentale en utilisant la fonction _realloc()_ de _string.h_ chaque fois qu'un mot est ajouté. Le programme affiche les changements d'adresse de la liste, suite à cette réallocation. La fin de la liste est décidée par l'utilisateur en rentrant le mot "0".
 
-La phrase est construite à partir de la liste de mots en utilisant la fonction _memcpy()_ de _string.h_. La fin de la liste est décidée par l'utilisateur en rentrant le mot "0".
+La phrase est construite à partir de la liste de mots en utilisant la fonction _memcpy()_ de _string.h_.
 
 Exemple:
 - Entrée: _[?] Ajouter un mot (STOP = '0'): Ceci_
