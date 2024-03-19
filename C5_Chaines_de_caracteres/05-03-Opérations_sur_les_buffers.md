@@ -52,6 +52,8 @@ Les buffers alloués pour contenir la liste de mots entrés par l'utilisateur ai
 
 La phrase est construite à partir de la liste de mots en utilisant la fonction _memcpy()_ de _string.h_.
 
+**NB**: Dans un programme complet, il faudrait encore implémenter la libération des espaces alloués dynamiquement lorsque ceux-ci ne sont plus nécessaires. Cette partie sortant du scope de cet exercice, nous nous en dispenserons à titre exceptionnel.
+
 Exemple:
 - Entrée: _[?] Ajouter un mot (STOP = '0'): Ceci_
 - Entrée: _[?] Ajouter un mot (STOP = '0'): est_
