@@ -22,6 +22,8 @@ Le programme insert les séparateurs un à un dans la chaine qui contient le ré
 
 Le programme ne fait pas appel aux fonctions déclarées dans _string.h_.
 
+**NB**: Dans un programme complet, il faudrait encore implémenter la libération des espaces alloués dynamiquement lorsque ceux-ci ne sont plus nécessaires. Cette partie sortant du scope de cet exercice, nous nous en dispenserons à titre exceptionnel.
+
 Exemple
 - Commande: _./05-01-convert 123 12345678901234567_
 - Sortie: _[i] 25 characters needed to store 1518518504851851741_
