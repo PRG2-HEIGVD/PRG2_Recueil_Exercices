@@ -55,6 +55,7 @@ Exemple 5:
 #include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <errno.h>
 
 // check whether a string contains an integer or not
 // taken at https://stackoverflow.com/questions/1815367/catch-and-compute-overflow-during-multiplication-of-two-large-integers
