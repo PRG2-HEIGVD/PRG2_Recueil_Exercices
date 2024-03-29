@@ -135,7 +135,7 @@ Ecrire un programme qui demande une ligne de mots et en extrait puis affiche une
 Exemple
 - Entrée: _[?] Saisissez une ligne de mots: c'est la chaine de test_
 - Sortie: _[i] La ligne contient 23 caracteres._
-- Entrée: _[?] Extraire APRES combien de caracteres? 9_
+- Entrée: _[?] Extraire APRES combien de caracteres? 19_
 - Entrée: _[?] Extraire combien de caracteres? 4_
 - Sortie: _[i] La sous-chaîne extraite de la chaîne est : "test"_
 
