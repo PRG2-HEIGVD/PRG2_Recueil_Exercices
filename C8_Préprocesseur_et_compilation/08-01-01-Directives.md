@@ -31,7 +31,7 @@ typedef struct {
         unsigned int addr;
 
         // Et celui-ci, uniquement pour une config Linux
-        unsigned long addr;
+        unsigned long addrl;
 
         // Si ni Linux, ni WIN, afficher une erreur de compilation.
 
