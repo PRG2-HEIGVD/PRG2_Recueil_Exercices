@@ -1,3 +1,56 @@
+# Fichiers et buffers
+<details>
+<summary>Sources</summary>
+https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-66-scanf-exercise-implementation/
+</details>
+
+## Exercice 1
+Le dernier slide du chapitre 9 sur les fichiers montre un extrait de l'output obtenu en exécutant un programme sous Windows pour illustrer l'effet du buffering sur _stdout_. Un output complet très proche de celui de ce slide est illustré ci-après.
+
+<details>
+<summary>output de bufferedPrint</summary>
+
+```
+INFO: produit sous Windows 11/x86_64 avec mingw.
+```
+
+```
+$ .\bufferedPrint.exe 10 0
+buffer size = 10 characters
+flush never
+Enter the first numb
+```
+
+```
+$ .\bufferedPrint.exe 10 0
+buffer size = 10 characters
+flush never
+Enter the first numb12
+er: Enter the second
+```
+
+```
+$ .\bufferedPrint.exe 10 0
+buffer size = 10 characters
+flush never
+Enter the first numb12
+er: Enter the second12
+ number: Enter the third numbe
+```
+
+```
+$ .\bufferedPrint.exe 10 0
+buffer size = 10 characters
+flush never
+Enter the first numb12
+er: Enter the second12
+ number: Enter the third numbe12
+r:
+Average is : 12.000000
+```
+
+</details>
+
 ### Question 1: Lorsque le programme est exécuté avec les mêmes arguments que pour l'exercice précédent, quelle différence observe-t-on? Quel rôle joue les 2 OS dans cette différence de comportement?
 
 <details>
