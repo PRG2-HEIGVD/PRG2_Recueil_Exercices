@@ -42,14 +42,14 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    // start importing
+    // start reading
 
     char brand[MAXLEN]; char item[MAXLEN];
     float unit, total;
     int qty;
 
     while (fscanf(fin, "%s %s %f %d %f", brand, item, &unit, &qty, &total) != EOF)
-        printf("importing %s,%s,%.2f,%d,%.2f\n", brand, item, unit, qty, total);
+        printf("reading %s,%s,%.2f,%d,%.2f\n", brand, item, unit, qty, total);
 
     fclose(fin);
     return 0;
@@ -114,17 +114,24 @@ int main(int argc, char **argv) {
 
     fclose(fin);
 
+    // create/overwrite DB file
+	
     FILE *fout = fopen(argv[2], "wb");
     if (!fout) {
         printf("[e] could not open %s\n", argv[2]);
         return 1;
     }
 
+    // DB size as header
+	
     if (fwrite(&i, sizeof i, 1, fout) != 1) {
         printf("[e] could not write size of stock to %s\n", argv[2]);
         return 1;
     }
-    if (fwrite(stock, sizeof stock[0], i, fout) != i) {
+    
+	// DB rows
+	
+	if (fwrite(stock, sizeof stock[0], i, fout) != i) {
         printf("[e] could not write stock to %s\n", argv[2]);
         return 1;
     }
@@ -167,8 +174,8 @@ struct stockItem {
 
 int main(int argc, char **argv) {
 
-    if (argc != 3) {
-        printf("Usage: %s dbfile exportfile\n", argv[0]);
+    if (argc != 2) {
+        printf("Usage: %s dbfile\n", argv[0]);
         return 1;
     }
 
@@ -178,7 +185,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    // start importing
+    // load DB into memory
 
     struct stockItem stock[MAXSTOCK] = { 0 };
     int n = 0;
