@@ -139,15 +139,76 @@ int main(int argc, char **argv) {
 
 
 ## Exercice 3
-Ecrivez le programme qui importe le fichier binaire produit lors de l'exercice précédent en mémoire puis l'exporte vers un fichier texte:
-- Le fichier binaire est chargé en mémoire dans un tableau de structures _stockItem_ telles que définies dans l'exercice 2.
-- Le fichier texte résultat respecte le format décrit dans l'exercice 1 si bien qu'on devrait y retrouver le même contenu si ce fichier a été importé précédemment.
+Ecrivez le programme qui importe le fichier binaire produit lors de l'exercice précédent en mémoire puis affiche le contenu à l'écran au format:
+
+~~~
+[i] The stock contains 2 products:
+[i] - row 0: [Federer],[raquette],[999.90],[10],[9999.00]
+[i] - row 1: [Odermatt],[skis],[567.50],[20],[11350.00]
+~~~
+
+NB: Le fichier binaire est chargé en mémoire dans un tableau de structures _stockItem_ telles que définies dans l'exercice 2.
 
 <details>
 <summary>Solution</summary>
 
 ~~~cpp
-TBD
+#include <stdio.h>
+
+#define MAXLEN 256
+#define MAXSTOCK 80
+
+struct stockItem {
+    char brand[MAXLEN];
+    char item[MAXLEN];
+    int qty;
+    float unit, total;
+};
+
+int main(int argc, char **argv) {
+
+    if (argc != 3) {
+        printf("Usage: %s dbfile exportfile\n", argv[0]);
+        return 1;
+    }
+
+    FILE *fin = fopen(argv[1], "rb");
+    if (!fin) {
+        printf("[e] could not open %s\n", argv[1]);
+        return 1;
+    }
+
+    // start importing
+
+    struct stockItem stock[MAXSTOCK] = { 0 };
+    int n = 0;
+
+    // get DB size (number of rows)
+
+    if (fread(&n, sizeof n, 1, fin) != 1) {
+        printf("[e] error trying to read db size\n");
+        return 1;
+    }
+
+    // get DB rows
+
+    if (fread(stock, sizeof stock[0], n, fin) != n) {
+        printf("[e] error trying to read %d db contents\n", n);
+        return 1;
+    }
+
+    // display DB contents
+
+    printf("[i] The stock contains %d products:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("[i] - row %d: ", i);
+        printf("[%s],[%s],", stock[i].brand, stock[i].item);
+        printf("[%.2f],[%d],[%.2f]\n", stock[i].unit, stock[i].qty, stock[i].total);
+    }
+
+    fclose(fin);
+    return 0;
+}
 ~~~
 
 </details>
