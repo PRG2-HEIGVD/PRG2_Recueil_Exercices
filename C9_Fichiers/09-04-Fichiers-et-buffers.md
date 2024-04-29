@@ -187,6 +187,6 @@ Cette observation plus attentive ne peut pas être expliquée avec la seule diff
 1) _stdin_ et _stdout_ appliquent toutes deux une stratégie de buffering par ligne lorsque elles sont en mode buffering.
 2) _stdout_ est automatiquement vidée lorsqu'une tentative de lecture sur _stdin_ nécessite une lecture depuis le terminal.
 
-Ensuite, il faut comprendre les appels à _scanf()_ et leur influence sur _stdin_. Sans rentrer dans les détails, _scanf()_ ne consomme pas le _'\n'_ après le nombre lu. C'est le _scanf()_ suivant qui le fait pour atteindre le premier caractère qui correspond au format attendu: "%d" attend un chiffre. La lecture de la ligne sur _stdin_, et donc le vidage de _stdout_, est déclenchée en retard d'un _scanf()_, ce qui esplique le phénomène observé.
+Ensuite, il faut comprendre les appels à _scanf()_ et leur influence sur _stdin_. Sans rentrer dans les détails, _scanf()_ ne consomme pas le _'\n'_ après le nombre lu. C'est le _scanf()_ suivant qui le fait pour atteindre le premier caractère qui correspond au format attendu: "%d" attend un chiffre. La lecture de la ligne sur _stdin_, et donc le vidage de _stdout_, est déclenchée en retard d'un _scanf()_, ce qui explique le phénomène observé.
 
 </details>
