@@ -1,4 +1,4 @@
-# Fichiers texte
+# Fichiers binaire
 <details>
 <summary>Sources</summary>
 https://enit.rnu.tn/fr/Minds/informatique/TD5%20avec%20corrig%C3%A9.pdf
