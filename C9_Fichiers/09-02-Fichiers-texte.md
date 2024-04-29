@@ -46,21 +46,30 @@ Pour le compléter:
 
 ~~~cpp
 
-int countm(FILE *f) {
-    int c;
-    int cpt = 0;
-    int curw = false;
+...
 
-    while ((c = fgetc(f)) != EOF)
-        if (c == ' ' || c == '\n')
-            curw = false;
-        else if (!curw) {
-            curw = true;
-            cpt++;
-        }
+int countc(FILE *f) {
+    int cpt = 0;
+
+    while (fgetc(f) != EOF)
+        cpt++;
 
     return cpt;
 }
+
+...
+
+    // *** TODO: open file
+
+    FILE *fin = fopen(argv[1], "r");
+    if (!fin) {
+        printf("[e] could not open %s\n", argv[1]);
+        return 1;
+    }
+
+    // count characters in file
+
+...
 
 
 ~~~
