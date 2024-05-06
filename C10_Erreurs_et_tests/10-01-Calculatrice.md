@@ -60,6 +60,42 @@ Bien entendu, il y a plusieurs manière de tester.
 Ci-après l'une d'entre elle.
 
 ~~~cpp
+#include <CUnit/CUCurses.h>
+#include <CUnit/CUnit.h>
+
+#include <math.h>
+
+// Fonction à tester
+int calculer(int nombre1, int nombre2, char operateur) {
+
+        switch (operateur) {
+        case '+':
+                return nombre1 + nombre2;
+
+        case '-':
+                return nombre1 - nombre2;
+
+        case '*':
+                return nombre1 * nombre2;
+
+        case '/':
+                if (nombre2 == 0) {
+                        // Gérer l'erreur de division par zéro
+                        return -1;
+                } else {
+                        return nombre1 / nombre2;
+                }
+
+        case '^':
+                // Puissance non implémentée avec des entiers
+                return (int) pow((double) nombre1, (double) nombre2);
+
+        default:
+                // Gérer l'opérateur invalide
+                return -1;
+        }
+}
+
 
 void test_addition(void) {
         CU_ASSERT_EQUAL(calculer(2, 2, '+'), 4);
