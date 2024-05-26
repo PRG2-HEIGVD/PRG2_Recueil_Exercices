@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 
 
 ## Exercice 2
-Compléter le programme de l'exercice précédent pour qu'il importe le contenu lu dans des enregistrements en mémoire puis sauvegarde ces derniers dans un fichier binaire qui fera lieu de base de données.
+Compléter le programme de l'exercice précédent pour qu'il importe le contenu lu dans des enregistrements en mémoire puis sauvegarde ces derniers dans un fichier binaire qui fera office de base de données.
 
 Le contenu est chargé en mémoire dans un tableau de structures _stockItem_ définies ainsi:
 
