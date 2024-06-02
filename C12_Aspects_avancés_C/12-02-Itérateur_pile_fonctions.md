@@ -2,9 +2,9 @@
 # Itérateur sur une pile de fonctions
 
 Pour cet exercice, il faut reprendre les fonctions décrites dans le chapitre C12
-pour la gestion d'une collection de fonctions (fonctions ``func_register()``, ``do_work()``, etc.)
+pour la gestion d'une collection de fonctions ainsi que les deux tâches (fonctions ``task_A()``, ``task_B()``, ``func_register()``, ``do_work()``, etc.)
 
-a)Implémentez les fonctions  ``push()``, ``pop()``, ``top()`` et ``empty()``pour la gestion d'une pile de pointeurs sur fonction.
+a) Implémentez les fonctions  ``push()``, ``pop()``, ``top()`` et ``empty()``pour la gestion d'une pile de pointeurs sur fonction.
 
 b) Modifiez les fonctions ``func_register()`` et ``do_work()`` afin de gérer la collection de fonctions à l'aide d'une pile de fonctions. Une fois la fonction exécutée, elle sera ôtée de la collection.
 
