@@ -54,13 +54,6 @@ void set_packet_status(struct Packet *packet, unsigned int status) {
     packet->packet_status = status;
 }
 
-size_t packet_size(struct Packet packet) {
-    // Calcul de la taille en octets du paquet
-    size_t size = sizeof(packet.sequence_number) + sizeof(packet.packet_type) + sizeof(packet.packet_status) + sizeof(packet.data_length);
-
-    return size;
-}
-
 int main() {
     struct Packet my_packet;
 
@@ -68,19 +61,19 @@ int main() {
 
     printf("Informations du paquet initial :\n");
     print_packet(my_packet);
-    
+
     set_packet_type(&my_packet, 2);
     printf("\nType modifié :\n");
 
     print_packet(my_packet);
-    
+
     set_packet_status(&my_packet, 0);
     printf("\nStatut modifié :\n");
-    
+
     print_packet(my_packet);
-    
-    printf("\nTaille du paquet : %zu octets\n", packet_size(my_packet));
-    
+
+    printf("\nTaille du paquet : %zu octets\n", sizeof(my_packet));
+
     return 0;
 }
 
